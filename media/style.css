@@ -1,0 +1,865 @@
+/*
+ *******************************************************************************
+ * General styling
+ */
+* {
+    margin:0;
+    border:0;
+   
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.eot');
+    src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular-webfont.woff') format('woff'),
+         url('../fonts/lato-regular-webfont.ttf') format('truetype'),
+         url('../fonts/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'latolight';
+    src: url('../fonts/lato-light-webfont.eot');
+    src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-light-webfont.woff') format('woff'),
+         url('../fonts/lato-light-webfont.ttf') format('truetype'),
+         url('../fonts/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+html, body {
+    height:100%; font-family: 'latoregular';
+}
+
+.wrapper {
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    width:100%;
+	background:#FFF !important;
+    margin:0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.clear {
+    clear:both;
+    height:10px;
+}
+
+.errorsHolder {
+    width:90%;
+    padding:4% 3%;
+    margin:0px auto 10px;
+    background-color:#FF0000;
+    border:1px solid #FFFFFF;
+    border-radius:10px;
+    display:none;
+    font-size:13px;
+    color:#FFFFFF;
+}
+.errorsHolder ul {
+    margin-top:10px;
+    margin-left:-18px;
+}
+
+.successHolder {
+    width:90%;
+    padding:4% 3%;
+    margin:0px auto 10px;
+    background-color:#4CB849;
+    border:1px solid #FFFFFF;
+    border-radius:10px;
+    display:none;
+    font-size:17px;
+}
+
+.fixedWidth {
+    width:980px;
+    margin:0 auto;
+}
+
+.formLine {
+    display:block;
+    margin:10px 0;
+    clear:both;
+    min-height:40px;
+	color:#000;
+	font-weight:bold;
+}
+
+.noMargin {
+    margin:0;
+}
+.topMargin {
+    margin-top:10px;
+}
+.bottomMargin {
+    margin-bottom:10px;
+}
+
+.whiteText {
+    color:#FFFFFF;
+}
+
+.whiteText:hover {
+    color:#f37736;
+}
+
+.successMessage {
+    margin:7%;
+    text-align:center;
+}
+
+.centerText {
+    text-align:center;
+}
+
+.noBorder {
+    border:0 !important;
+}
+
+.lineDivide {
+    clear:both;
+    margin:15px auto 0;
+    border-bottom:1px solid #FFFFFF;
+    width:95%;
+}
+
+/*
+ *******************************************************************************
+ * Header
+ */
+.headerWrapper {
+    width:100%;
+    min-height:70px;
+}
+
+.headerWrapper .headerContentTopWrapper {
+    width:100%;
+    min-height:35px;
+    background-color:#6A5A8B;
+    color:#FFFFFF;
+}
+
+.headerWrapper .headerContentTopWrapper .headerContentTopContent {
+}
+
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .left {
+    float:left;
+    width:35%;
+    padding-top:7px;
+    margin-left:2.05%;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .left a {
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right {
+    width:58.78%;
+    float:right;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .socialIcons {
+    width:50%;
+    float:left;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .socialIcons img {
+    float:right;
+    width:25px;
+    height:25px;
+    border:0;
+    margin:2%;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .search {
+    float:right;
+    margin-right:7.9%;
+    margin-top:7px;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .search img {
+    position:absolute;
+    margin-top:-18px;
+    margin-left:10.5%;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .search input {
+    border:1px solid grey;
+    border-radius:8px;
+    padding-left:5px;
+    padding-bottom:2px;
+}
+
+.headerWrapper .headerContentBottomWrapper {
+    width:100%;
+    min-height:53px;
+    color:#6A5A8B;
+	 border-bottom:2px solid #D5D5D5;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent {
+    min-height:78px;
+    /*border-bottom:1px solid #D5D5D5;*/
+    padding:0 2.04%;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .logo {
+    float:left;
+    width:23%;
+    padding-top:3px;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .logo img {
+    width:50%;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu {
+    float:right;
+    text-align:right;
+    width:65%;
+    padding-top:30px;
+    margin-right:3%;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu ul a {
+    font-size:16px;
+    color:#6A5A8B;
+    text-decoration:none;
+	 font-family: 'latolight';
+}
+
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu ul a:hover {
+    font-size:16px;
+    color:#f37736;
+    text-decoration:none;
+}
+
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu ul li {
+    list-style-type:none;
+    display:inline-block;
+    margin:0 3% 0 0;
+}
+
+.headerWrapper .breadcrumbsWrapper {
+    width:100%;
+    margin-top:5px;
+    min-height:15px;
+    color:#6A5A8B;
+}
+.headerWrapper .breadcrumbsWrapper .breadcrumbs {
+    font-size:13px;
+    text-align:left;
+    border-bottom:1px solid #D5D5D5;
+    padding:0px 2.04% 8px;
+}
+
+
+/*
+ *******************************************************************************
+ * Main Content
+ */
+.contentWrapper {
+    width:980px;
+    margin:0 auto;
+}
+
+.contentWrapper .bannerImageHolder {
+    width:98%;
+    margin:0 auto;
+    border:1px solid #D5D5D5;
+}
+
+.contentWrapper .infoBoxesWrapper {
+    width:100%;
+}
+
+.contentWrapper .infoBoxesWrapper .infoBox {
+    float:left;
+    width:280px;
+    height:384px;
+    margin-left:35px;
+    color:#FFFFFF;
+}
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxImage {
+    width:100%;
+    height:160px;
+	
+}
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxImage img{
+	border-radius:8px;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+margin:5px 0 0 0;
+}
+
+
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxTitle {
+    width:100%;
+    height:33px;
+    padding-top:12px;
+    background-color:#6a5a8b;
+    text-align:center;
+	border-radius:8px 8px 0 0 ;
+-moz-border-radius:8px 8px 0 0 ;
+-webkit-border-radius:8px 8px 0 0 ;
+margin:7px 0 0 0;
+
+}
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxText {
+    width:248px;
+    height:150px;
+    background-color:#fff;
+    font-size:13px;
+    padding:15px;
+	border:1px solid #000; color:#000;
+		border-radius:0 0 8px 8px;
+-moz-border-radius:0 0 8px 8px;
+-webkit-border-radius:0 0 8px 8px; line-height:22px;
+}
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin {
+    width:238px;
+    height:300px;
+    padding:20px;
+    background-color:#fff;
+	border:1px solid #000; color:#000;
+		border-radius:0 0 8px 8px;
+-moz-border-radius:0 0 8px 8px;
+-webkit-border-radius:0 0 8px 8px;
+
+}
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin a {
+    margin:8px auto;
+    display:block;
+    color:#000;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin a:hover { text-decoration:underline;
+}
+
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin form label {
+    width:100%;
+    clear:both;
+    display:block;
+    font-size:14px;
+}
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin form input {
+    width:240px;
+    height:24px;
+    margin:5px auto 15px;
+    display:block;
+	border: 1px solid #000;
+	
+}
+
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin form select {
+    width:240px;
+    height:24px;
+    margin:5px auto 15px;
+    display:block;
+	border: 1px solid #000;}
+	
+.contentWrapper .infoBoxesWrapper .infoBox .infoBoxLogin form button {
+    background-color:#f37736;
+    border:1px solid #f37736;
+    border-radius:8px;
+    width:200px;
+    display:block;
+    color:#FFFFFF;
+    margin:0px auto;
+    font-size:18px;
+	padding:5px 0; position:relative; left:-10px; cursor:pointer;
+}
+
+/*
+ **************************************************
+ * Non homepage CSS
+ */
+.contentWrapper .leftHolder {
+    float:left;
+    width:65%;
+    min-height:286px;
+    background-color:#fff;
+    border:1px solid #000;
+    border-radius:8px;
+    color:#FFFFFF;
+}
+.contentWrapper .leftHolder .titleHolder {
+    width:95%;
+    height:42px;
+    background-color:#6a5a8b;
+    padding:8px 15px 0px;
+    border:1px solid #583B4D;
+    border-bottom:1px solid #FFFFFF;
+    border-radius:8px 8px 0px 0px;
+}
+.contentWrapper .leftHolder .contentHolder {
+    width:95%;
+    padding:2.5% 2.5% 1% 2.5%;
+}
+.contentWrapper .leftHolder .contentHolder p {
+    margin:10px 0px;
+}
+
+.contentWrapper .leftHolder .contentHolder table {
+    width:100%;
+    font-size:14px;
+    margin-top:15px;
+}
+.contentWrapper .leftHolder .contentHolder table tr.header {
+    /*background-color:#A0C9E5;*/
+}
+.contentWrapper .leftHolder .contentHolder table tr.odd {
+    background-color:#1691E2;
+}
+.contentWrapper .leftHolder .contentHolder table tr.even {
+    background-color:#F37736;
+}
+
+.contentWrapper .rightHolder {
+    float:right;
+    width:32.65%;
+    border:1px solid #000;
+    border-radius:8px;
+    background-color:#fff;
+    color:#000;
+}
+.contentWrapper .rightHolder .titleHolder {
+    width:91.25%;
+    padding:13px;
+    height:24px;
+    background-color:#6a5a8b;
+    border:1px solid #583B4D;
+    border-bottom:1px solid #FFFFFF;
+    border-radius:8px 8px 0px 0px;
+}
+.contentWrapper .rightHolder .contentHolder {
+    width:91%;
+    padding:15px;
+}
+.contentWrapper .rightHolder .contentHolder form label {
+    width:100%;
+    clear:both;
+    display:block; padding:0 25px;
+}
+.contentWrapper .rightHolder .contentHolder form input {
+    width:82.76%;
+    height:25px;
+    margin:5px auto 15px;
+    display:block;
+	border:1px solid #000;
+}
+.contentWrapper .rightHolder .contentHolder form textarea {
+    width:82.76%;
+    height:90px;
+    margin:5px auto 15px;
+    display:block;
+	border:1px solid #000;
+}
+.contentWrapper .rightHolder .contentHolder form button {
+    background-color:#f37736;
+    border:1px solid ##f37736;
+    border-radius:8px;
+    width:69%;
+    display:block;
+    color:#FFFFFF;
+    margin:0px auto;
+    font-size:22px;
+	cursor:pointer;
+	font-size:18px; padding:5px 0;
+	position: relative; left:-20px;
+}
+
+/*
+ **************************************************
+ * Register page CSS
+ */
+.contentWrapper .leftHolder #nativeFacebookSelect {
+    margin:20% auto;
+    width:50%;
+}
+.contentWrapper .leftHolder #nativeFacebookSelect #registerWithUs, .contentWrapper .leftHolder #nativeFacebookSelect #registerUsingFacebook {
+    border:1px solid #FFFFFF;
+    border-radius:18px;
+    margin:0 0 20px;
+    padding:5px 3%;
+    text-align:center;
+    background-color:#54486E;
+}
+.contentWrapper .leftHolder #nativeFacebookSelect a {
+    color:#FFFFFF;
+    text-decoration:none;
+    font-size:20px;
+}
+
+.contentWrapper .leftHolder #nativeRegisterForm {
+    display:none;
+}
+.contentWrapper .leftHolder #nativeRegisterForm #hideSecondParentDetails {
+    display:none;
+}
+
+.formHolder form {
+    width:95%;
+    margin:0 auto;
+}
+
+.formHolder form .formLine label {
+    width:35%;
+    text-align:right;
+}
+.formHolder form .formLine input, .formHolder form .formLine select {
+    width:75%;
+    float:right;
+    height:25px;
+    background-color:#FFFFFF; padding: 5px; border: 1px solid #000;
+}
+.formHolder form .formLine textarea {
+    width:60%;
+    float:right;
+    height:50px;
+    margin-bottom:11px;
+    background-color:#FFFFFF;
+}
+.formHolder form .formLine #birthDate {
+    float:right;
+    width:61%;
+}
+.formHolder form .formLine #birthDate select {
+    width:35%;
+    margin:0 0 0 -1.7%;
+    height:36px;
+    float:left;
+}
+.formHolder form button {
+    background-color:#f37736;
+    /*border:1px solid #FFFFFF;*/
+    border-radius:25px;
+    width:30%;
+    display:block;
+    color:#FFFFFF;
+    margin:0px auto;
+    font-size:18px;
+    padding:5px 0;
+	font-family: 'latolight'; float:right; font-weight:bold; cursor:pointer;
+}
+
+/*
+ *******************************************************************************
+ * Footer
+ */
+.footerWrapper, .push {
+    min-height:155px; /* .push must be the same height as .footer */
+    clear:both;
+}
+
+.footerWrapper {
+    width:100%;
+    background-color:#6A5A8B;
+    color:#FFFFFF;
+    margin-top:30px;
+}
+
+.footerWrapper .footerContent {
+    margin:0 auto;
+    background-color:#53476F;
+}
+
+.footerWrapper .footerContent .sitemap {
+    float:left;
+}
+.footerWrapper .footerContent .sitemap ul {
+    float:left;
+    margin:15px 20px 0px -10px;
+    list-style-type:none;
+}
+.footerWrapper .footerContent ul li a {
+    text-decoration:none;
+    color:#FFFFFF;
+    font-size:12px;
+}
+
+.footerWrapper .footerContent .contactDetails {
+    float:right;
+    margin:15px 30px;
+    font-size:12px;
+}
+.footerWrapper .footerContent .contactDetails p {
+    margin:5px;
+}
+
+/*****************************************************************************/
+
+/*
+ ****************************************************
+ * backend CSS
+ */
+.tilesHolder {
+    margin:0 auto;
+    width:90%;
+    min-height:300px;
+}
+.tilesHolder .tile {
+    width:30%;
+    height:155px;
+    margin:30px 1% 30px 1.2%;
+    padding-top:15px;
+    padding-bottom:10px;
+    float:left;
+    background-color:#6b5c8d;
+    text-align:center;
+	
+	border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius:50px;
+border: 1px solid #003c78;
+}
+.tilesHolder .tile h3 {
+    margin-top:20px;font-family: 'latolight';
+}
+.tilesHolder .tile img {
+    height:60%;
+}
+
+.innerContentHolder {
+    position:relative;
+    width:88%;
+    min-height:300px;
+    margin:0 auto;
+    background-color:#b7a3cc;
+    border:1px solid #DFDFDF;
+    border-radius:10px;
+    padding:8px 1%; color:#FFF;
+	
+}
+
+.innerContentHolder table {
+    width:860px;
+    padding:5px;
+    text-align:left;
+	border-bottom:1px solid #FFFFFF;
+
+}
+
+
+
+.innerContentHolder .titleHolder {
+    margin:5px 0px 15px;
+    padding-bottom:5px;
+    width:100%;
+    text-align:center;
+    border-bottom:1px solid #FFFFFF;
+}
+
+.innerContentHolder .menu, .innerContentHolder .leftView {
+    float:left;
+    width:30%;
+    height:100%;
+}
+.innerContentHolder .menu a, .innerContentHolder .leftView a {
+    display:block;
+    border:1px solid #6A5A8B;
+    background-color:#6A5A8B;
+    width:90%;
+    border-radius:25px;
+    padding:3% 2% 3% 8%;
+    margin:5px 0;
+    text-decoration:none;
+}
+
+.innerContentHolder .menu a:hover, .innerContentHolder .leftView a:hover {
+    background-color:#fff;
+}
+
+.innerContentHolder .menu a:active, .innerContentHolder .leftView a:active, .innerContentHolder .menu a.active, .innerContentHolder .leftView a.active {
+    background-color:#A48CD8;
+    font-weight:bold;
+}
+
+.innerContentHolder .searchOptions {
+    width:37% !important;
+}
+.innerContentHolder .searchResults {
+    width:61% !important;
+    margin:10px 0px;
+    min-height:280px;
+    color:#FFFFFF;
+}
+.innerContentHolder .searchResults ul li {
+    font-size:15px;
+    margin:2px 0px;
+}
+.innerContentHolder .searchResults ul li a {
+    color:#000000;
+    text-decoration:none;
+}
+.innerContentHolder .searchResults ul li a:hover {
+    text-decoration:underline;
+}
+
+.innerContentHolder .rightView {
+    float:right;
+    width:68%;
+    height:100%;
+    background-color:#fff;
+    border:2px solid #969696;
+    border-radius:10px; color:#000;
+}
+
+.innerContentHolder .rightView .tilesHolder {
+    margin:0 auto;
+    width:90%;
+    min-height:300px;
+}
+.innerContentHolder .rightView .tilesHolder .tile {
+    width:47%;
+    height:22px;
+    margin:8px 1% 8px 1.2%;
+    padding-top:15px;
+    padding-bottom:10px;
+    float:left;
+    background-color:#671BB3;
+    text-align:center;
+    border:1px solid #671BB3;
+    border-radius:50px;
+}
+.innerContentHolder .rightView .tilesHolder .tile h3 {
+    margin-top:0px;
+    font-size:17px;
+}
+.innerContentHolder .rightView .tilesHolder .tile img {
+    height:60%;
+}
+
+.innerContentHolder .rightView .tilesHolder .tilesSection {
+    margin:5px 0px;
+    border-bottom:1px solid white;
+}
+.innerContentHolder .rightView .tilesHolder .tilesSection .title {
+    margin-bottom:2px;
+    color:#FFFFFF;
+}
+
+/*
+ *********************************************
+ * Drivers ed stuff
+ */
+.driversEdHolder #de_unit_title_holder {
+    margin:1% 1.5%;
+    text-align:center;
+    font-weight:bold;
+}
+.driversEdHolder #de_unit_purpose_holder {
+    margin:1% 1.5%;
+}
+.driversEdHolder #de_unit_purpose_holder ul li {
+    margin:10px 0;
+}
+
+.driversEdHolder .buttonsHolder {
+    position:absolute;
+    bottom:0;
+    margin:10px 1.5%;
+    width:100%;
+}
+.driversEdHolder .buttonsHolder button {
+    width:44%;
+    margin:0% 1.5%;
+    height:30px;
+    text-align:center;
+    color:#FFFFFF;
+    background-color:#54486E;
+    border:1px solid #54486E;
+    border-radius:15px;
+}
+.driversEdHolder .buttonsHolder .disabled {
+    background-color:#AAAAAA;
+    border:1px solid #AAAAAA;
+}
+/*NEW CSS dd*/
+.proceedButton{background-color: #54486e;
+    border-radius: 25px;
+    color: #ffffff;
+    display: block;
+    font-size: 22px;
+    margin: 15px auto;
+    padding: 5px 0;
+    width: 40%;
+  }
+
+  /* 27-08-2014*/
+   #backbutton{
+       float: right;
+	   background:#6b5c8d; padding:2px 5px; cursor:pointer; color:#FFF; line-height:18px; margin:0px 0 0 0;
+	    border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+    }
+	
+	 #backbutton button{      
+	   background:#6b5c8d;color:#FFF; cursor:pointer; }
+	
+
+  /* employee timesheet style 06-10-2014 */  
+   .additional_note{
+     width: 100%;
+     height: 100px;
+    }
+    .submit{
+      background-color: #54486e;
+      border-radius: 25px;
+      color: #ffffff;
+      display: block;
+      font-size: 16px;
+      padding: 5px 0;
+      width: 165px; 
+      margin-left: 350px;
+    }
+    .submit_button{
+      background-color: #54486e;
+      border-radius: 25px;
+      color: #ffffff;
+      display: block;
+      font-size: 16px;
+      padding: 5px 0;
+      margin-left: 0px;
+      width: 210px;
+    }
+    .add_new_btn{
+      float: right;
+    }
+    .top_labels{
+      display: inline-flex;
+    }
+    .report_for_the_day{
+      width: 380px;
+    }
+    .other_compensation{
+      width: 300px;
+    }
+    .totalgross{
+      margin:0 20px 40px 0;
+      width: 100%;
+    }
+    .overtime_report{
+      width: 250px;
+    }
+
+
+/*kartik added*/
+	
+#tabs{ margin:30px 0 0 20px !important; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{ background:#6a5a8b !important; color:#FFF !important; font-family: 'latoregular';}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{background:#a593cb !important; margin-top:0px !important;
+ font-family: 'latoregular';}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor{color:#FFF !important; font-family: 'latoregular';}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{color:#000 !important; font-family: 'latoregular';}
+.ui-accordion .ui-accordion-content{ font-family: 'latolight'; line-height:30px !important;}
+
+.innerContentHolder table th{
+	border-right:1px solid #FFFFFF; text-align:center; 
+}
+.innerContentHolder table td{
+	border-right:1px solid #FFFFFF; text-align:center; 
+}
+.ui-tabs .ui-tabs-nav{background:#000 !important;}
+
+.titleHolder h1{ font-size:20px;}
+.titleHolder h3{ color:#FFF;}

@@ -1,0 +1,171 @@
+/**
+ * Mobile css file.
+ * The only things that will generally be in this file are some tweaks to make things look perfect on mobile.
+ * In general, nothing major ever needs to be in this file as we're using a semi-liquid layout.
+ */
+body {
+    overflow-x:hidden;
+}
+
+.fixedWidth {
+    width:auto;
+    margin:0 auto;
+}
+
+
+/*
+ *********************************************
+ * Header
+ */
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .socialIcons {
+    width:100%;
+    float:right;
+    margin:0;
+}
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .socialIcons img {
+    width:25px;
+    height:25px;
+}
+
+.headerWrapper .headerContentTopWrapper .headerContentTopContent .right .search {
+    display:none;
+}
+
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent * {
+    float:none;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .logo {
+    margin:0 auto;
+    float:none;
+    width:70%;
+    border-bottom:1px solid #CCCCCC;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .logo img {
+    width:95%;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu {
+    float:none;
+    width:100%;
+    text-align:center;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu ul {
+    margin-bottom:10px;
+    margin-left:0;
+    -webkit-margin-before:0;
+    -webkit-padding-start:0;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu ul a {
+    color:#FFFFFF;
+    font-weight:bold;
+}
+.headerWrapper .headerContentBottomWrapper .headerContentBottomContent .menu ul li {
+    display:block;
+    border:1px solid #FFFFFF;
+    background-color:#6A5A8B;
+    width:94%;
+    border-radius:25px;
+    padding:3%;
+}
+
+/*
+ *********************************************
+ * Main content
+ */
+.contentWrapper .infoBoxesWrapper .infoBox {
+    float:none;
+    margin:0 auto;
+}
+
+/*
+ **************************
+ * Non-homepage content
+ */
+.contentWrapper .leftHolder {
+    float:none;
+    margin:0 auto;
+    width:95%;
+    min-height:150px;
+}
+.contentWrapper .leftHolder .titleHolder {
+    padding:8px 7px 0px;
+    height:30px;
+}
+.contentWrapper .leftHolder .titleHolder h1 {
+    font-size:15px;
+    margin:0 auto;
+}
+
+.contentWrapper .rightHolder {
+    float:none;
+    width:95%;
+    margin:5px auto;
+}
+
+/*
+ **************************
+ * Registration page CSS
+ */
+.contentWrapper .leftHolder #nativeFacebookSelect {
+    width:90%;
+}
+.formHolder form .formLine label {
+    width:95%;
+    text-align:left;
+    display:block;
+    float:none;
+}
+.formHolder form .formLine input, .formHolder form .formLine select {
+    width:95%;
+    display:block;
+    margin:10px auto;
+    float:none;
+}
+.formHolder form .formLine #birthDate {
+    float:none;
+    width:95%;
+}
+.formHolder form .formLine #birthDate select {
+    width:31%;
+    margin:10px 0 10px 1.5%;
+}
+
+.formHolder form button {
+    width:80%;
+}
+
+/*
+ *********************************************
+ * Footer
+ */
+.footerWrapper {
+    padding-top:5px;
+    min-height:200px;
+}
+.footerWrapper .footerContent .sitemap {
+    float:none;
+    margin:0 auto;
+    width:100%;
+}
+.footerWrapper .footerContent .sitemap ul {
+    float:left;
+    margin:0;
+    width:100px;
+}
+.footerWrapper .footerContent .sitemap ul li {
+    margin-bottom:5px;
+}
+.footerWrapper .footerContent .contactDetails {
+    display:none;
+}
+
+
+
+/*
+ ***********************************************************
+ * Student section overrides
+ */
+.tilesHolder .tile {
+    width:47%;
+    height:110px;
+    margin:5px 1.5% 5px 1.5%;
+}

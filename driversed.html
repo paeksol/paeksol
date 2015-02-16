@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom CSS -->
+    <link href="css/custom-styles.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="jquery-latest.js"></script>
+    <script type="text/javascript">
+
+$(document).ready(function() {
+
+	//Default Action
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+	
+	//On Click Event
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+		var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active content
+		return false;
+	});
+
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+//Set default open/close settings
+$('.acc_container').hide(); //Hide/close all containers
+$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+
+//On Click
+$('.acc_trigger').click(function(){
+	if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+		$('.acc_trigger').removeClass('active').next().slideUp(); //Remove all .acc_trigger classes and slide up the immediate next container
+		$(this).toggleClass('active').next().slideDown(); //Add .acc_trigger class to clicked trigger and slide down the immediate next container
+	}
+	return false; //Prevent the browser jump to the link anchor
+});
+
+});
+</script>
+<title>Driversed</title>
+</head>
+
+<body>
+<!--container start-->
+	<div class="container">
+	<!--driversed-box start-->
+    		<div id="driversed-box">
+            	<div class="back"><a href="#">Back</a></div>
+            	<div class="driversed-inner">
+                	
+                     <ul class="tabs">
+                        <li><a href="#tab1">Units</a></li>
+                        <li><a href="#tab2">Optional Online Video Viewing</a></li>
+                        <li><a href="#tab3">Charts and tables</a></li>
+                
+                    </ul>
+                        <div class="tab_container">
+                            <div id="tab1" class="tab_content">
+                            
+                            		<h2 class="acc_trigger"><a href="#">Unit 1</a></h2>
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           	<div class="list-1">
+                                            	<ul>
+                                                	<li>1.1<a href="#">Driving: A privilege, not a right</a></li>
+                                                    <li>1.2<a href="#">Operating a motor vehicle is a serious responsibility</a></li>
+                                                    <li>1.3<a href="#">Obeying the literal interpretation of the law</a></li>
+                                                   <li> 1.4<a href="#">Common courtesy is a key to traffic safety</a></li>
+                                                   <li> 1.5<a href="#">Importance of driver education</a></li>
+                                                   <li> 1.6<a href="#">History of the automobile</a></li>
+                                                   <li> 1.7<a href="#">Unit 1 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                   
+                                	<h2 class="acc_trigger"><a href="#">Unit 2</a></h2>
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           	<div class="list-1">
+                                            	<ul>
+                                                	<li>2.1<a href="#">Human Physical nature of the driver</a></li>
+                                                    <li>2.2<a href="#"> Psychological nature of the driver</a></li>
+                                                    <li>2.3<a href="#">Drugs and alcohol, in brief</a></li>
+                                                   <li> 2.4<a href="#"> Unit 2 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+	
+                                    <h2 class="acc_trigger"><a href="#">Unit 3</a></h2>
+                                    <div class="acc_container">
+                                        <div class="block">
+                                			<div class="list-1">
+                                            	<ul>
+                                                	<li>3.1<a href="#">Natural forces affecting driving, general</a></li>
+                                                    <li>3.2<a href="#">The Force of Gravity</a></li>
+                                                    <li>3.3<a href="#">The law of Inertia</a></li>
+                                                    <li>3.4<a href="#">Potential energy</a></li>
+                                                    <li>3.5<a href="#">Kinetic energy</a></li>
+                                                    <li>3.6<a href="#">Momentum</a></li>
+                                                    <li>3.7<a href="#">The force of friction</a></li>
+                                                    <li>3.8<a href="#">Centrifugal force</a></li>
+                                                    <li>3.9<a href="#">Forces in a crash</a></li>
+                                                   <li>3.10<a href="#">Unit 3 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 4</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>4.1<a href="#">Recognizing traffic signs</a></li>
+                                                    <li>4.2<a href="#">Recognizing traffic lights</a></li>
+                                                    <li>4.3<a href="#">Pavement markings</a></li>
+                                                    <li>4.4<a href="#">Unit 4 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 5</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>5.1<a href="#">Scope of Vehicle Code</a></li>
+                                                    <li>5.2<a href="#">Driver licenses and the vehicle code</a></li>
+                                                    <li>5.3<a href="#">Types of driver licenses and permits</a></li>
+                                                    <li>5.4<a href="#">Obtaining a California driver license</a></li>
+                                                    <li>5.5<a href="#">Requirements of licensed drivers</a></li>
+                                                    <li>5.6<a href="#">Actions taken against drivers and their licenses</a></li>
+                                                    <li>5.7<a href="#">Vehicle registration and the vehicle code</a></li>
+                                                    <li>5.8<a href="#">Automobile ownership: responsibility and registration</a></li>
+                                                    <li>5.9<a href="#">Unit 5 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 6</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>6.1<a href="#">Vehicle systems and components</a></li>
+                                                    <li>6.2<a href="#">Legal use of safety equipment</a></li>
+                                                    <li>6.3<a href="#">Vehicle maintenance</a></li>
+                                                    <li>6.4<a href="#">Economic operation of a motor vehicle</a></li>
+                                                    <li>6.5<a href="#">Purchase and financing a vehicle</a></li>
+                                                    <li>6.6<a href="#">Protecting yourself and your vehicle</a></li>
+                                                    <li>6.7<a href="#">Unit 6 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 7</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>7.1<a href="#">Issues of particular importance in urban driving</a></li>
+                                                    <li>7.2<a href="#">Freeways</a></li>
+                                                    <li>7.3<a href="#">Driving on open roads</a></li>
+                                                    <li>7.4<a href="#">Passing</a></li>
+                                                    <li>7.5<a href="#">Unit 7 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 8</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>8.1<a href="#">Traffic accidents, introduction</a></li>
+                                                    <li>8.2<a href="#">Traffic accidents, physical factors</a></li>
+                                                    <li>8.3<a href="#">Traffic accidents,psychological factors</a></li>
+                                                    <li>8.4<a href="#">Traffic accidents, driver behavior</a></li>
+                                                    <li>8.5<a href="#">Emergency situations, general</a></li>
+                                                    <li>8.6<a href="#">Emergency situations, mechanical failure</a></li>
+                                                    <li>8.7<a href="#">Emergency situations, other</a></li>
+                                                    <li>8.8<a href="#">Emergency breakdowns on the roadway</a></li>
+                                                    <li>8.9<a href="#">Hazardous roadways</a></li>
+                                                    <li>8.10<a href="#">Hazardous weather and other natural phenomena</a></li>
+                                                    <li>8.11<a href="#">Accident avoidance and prevention</a></li>
+                                                    <li>8.12<a href="#">Accident avoidance, defensive driving</a></li>
+                                                    <li>8.13<a href="#">Accident avoidance, specific types of collisions</a></li>
+                                                    <li>8.14<a href="#">Protecting yourself in an unavoidable accident</a></li>
+                                                    <li>8.15<a href="#">Procedures when involved in an accident</a></li>
+                                                    <li>8.16<a href="#">emergency scenes, when you are not involved</a></li>
+                                                    <li>8.17<a href="#">Financial responsibility</a></li>
+                                                    <li>8.18<a href="#">Unit 8 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 9</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>9.1<a href="#">Sharing the road with pedestrians</a></li>
+                                                    <li>9.2<a href="#">Sharing the road with school busses</a></li>
+                                                    <li>9.3<a href="#">Sharing the road with bicyclists</a></li>
+                                                    <li>9.4<a href="#">Sharing the road with animals</a></li>
+                                                    <li>9.5<a href="#">Sharing the road with large trucks</a></li>
+                                                    <li>9.6<a href="#">Sharing the road with slow moving vehicles</a></li>
+                                                    <li>9.7<a href="#">Sharing the road, work zones</a></li>
+                                                    <li>9.8<a href="#">Sharing the road with emergency vehicles</a></li>
+                                                    <li>9.9<a href="#">Sharing the road with motorcycles</a></li>
+                                                    <li>9.10<a href="#">Sharing the road with trains</a></li>
+                                                    <li>9.11<a href="#">Sharing the road with lighttrolleys and light</a></li>
+                                                    <li>9.12<a href="#">Sharing the road through carpooling</a></li>
+                                                    <li>9.13<a href="#">Sharing the road when lane usage changes</a></li>
+                                                    <li>9.14<a href="#">Unit 9 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Unit 10</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>10.1<a href="#">Alcohol and its effect on driving</a></li>
+                                                    <li>10.2<a href="#">Drugs and their effect on driving</a></li>
+                                                    <li>10.3<a href="#">Avoiding accidents involving drugs and alcohol</a></li>
+                                                    <li>10.4<a href="#">Unit 10 Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <h2 class="acc_trigger"><a href="#">Final Test</a></h2>                                
+                                    <div class="acc_container">
+                                        <div class="block">
+                                           <div class="list-1">
+                                            	<ul>
+                                                	<li>Final Test</li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                
+                                
+                            </div>
+                            <div id="tab2" class="tab_content">
+                                <div class="list-2">
+                                    <ul>
+                                        <li>Video 5<a href="#">Unit 5 Overview</a></li>
+                                        <li>Video 7<a href="#">Unit 7 Overview</a></li>
+                                        <li>Video 8a<a href="#">Unit 8 & 9 Overview - Part 1</a></li>
+                                        <li>Video 8b<a href="#">Unit 8 & 9 Overview - Part 2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="tab3" class="tab_content">
+                                <div class="list-2">
+                                    <ul>
+                                        <li>Figure 4.1<a href="#">General regulatory signs</a></li>
+                                        <li>Figure 4.2<a href="#">Parking regulatory signs</a></li>
+                                        <li>Figure 4.3<a href="#">Warning sign</a></li>
+                                        <li>Figure 4.4<a href="#">School signs</a></li>
+                                        <li>Figure 4.5<a href="#">Construction signs</a></li>
+                                        <li>Figure 4.6<a href="#">Recreation signs</a></li>
+                                        <li>Figure 4.7<a href="#">Guide signs</a></li>
+                                        <li>Figure 5.1<a href="#">Instruction permit and driver license requirements and restrictions chart</a></li>
+                                        <li>Figure 5.2<a href="#">Type of license needed chart</a></li>
+                                        <li>Figure 6.1<a href="#">Driver controls</a></li>
+                                        <li>Figure 6.2<a href="#">Indicator Lights, chimes & gauges</a></li>
+                                        <li>Figure 6.3<a href="#">Correct and incorrect seatbelt use</a></li>
+                                        <li>Figure 9.1<a href="#">Bicycle and pedestrian signs</a></li>
+                                        <li>Figure 10.1<a href="#">Blood Alcohol Content chart</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--driversed-box end-->
+    </div>
+    <!--container end-->
+ 
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
